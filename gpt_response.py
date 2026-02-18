@@ -1,31 +1,33 @@
 from flask import request
-import openai
+from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
 # load dotenv library
 load_dotenv()
 
-# access openai API key
-openai.api_key = os.environ.get("OPENAI_API_KEY")
+# Initialize OpenAI client
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
-
-# generate response
+# Generate response
 def response():
+    # Get the WhatsApp message sent by the user
+    user_msg = request.values.get('Body', '').strip()
 
-    user_msg = request.values.get('Body', '').lower()
+    if not user_msg:
+        return "Sorry, I didn't receive any message."
 
-    # Generate a response using the OpenAI API
-    gpt_response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt="" + user_msg,
+    # Generate a response using the Chat API
+    chat_response = client.chat.completions.create(
+        model="gpt-4o-mini",  # fast, small, good for chatbots
+        messages=[
+            {"role": "system", "content": "You are a helpful WhatsApp assistant."},
+            {"role": "user", "content": user_msg}
+        ],
         temperature=0.7,
-        max_tokens=256,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
+        max_tokens=256
     )
 
-    # Extract the response from the API
-    gpt_response = gpt_response["choices"][0]["text"].strip()
-    return gpt_response
+    # Extract the assistant's reply
+    gpt_reply = chat_response.choices[0].message.content.strip()
+    return gpt_reply
