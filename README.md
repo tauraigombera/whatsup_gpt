@@ -1,9 +1,11 @@
-﻿# whatsup_gpt
+﻿- ![GitHub stars](https://img.shields.io/github/stars/tauraigombera/whatsup_gpt?style=social)
+- ![Python](https://img.shields.io/badge/python-3.11-blue)
+- ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-whatsup_gpt is a WhatsApp chatbot powered by OpenAI’s ChatGPT model.
-It listens to incoming WhatsApp messages and generates intelligent, human-like responses in real time.
+## whatsup_gpt
 
-Built with Python (3.11+) and Flask, this project is lightweight, extensible, and easy to deploy.
+Production-ready WhatsApp AI chatbot built with Flask, Twilio and OpenAI model.
+This project is lightweight, extensible, and easy to deploy.
 
 ### Tools and Technologies
 - Python 3.11+
