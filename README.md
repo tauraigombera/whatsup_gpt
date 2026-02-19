@@ -1,6 +1,6 @@
-﻿# WhatsUpGPT
+﻿# whatsup_gpt
 
-WhatsUpGPT is a WhatsApp chatbot powered by OpenAI’s ChatGPT model.
+whatsup_gpt is a WhatsApp chatbot powered by OpenAI’s ChatGPT model.
 It listens to incoming WhatsApp messages and generates intelligent, human-like responses in real time.
 
 Built with Python (3.11+) and Flask, this project is lightweight, extensible, and easy to deploy.
@@ -21,9 +21,9 @@ Built with Python (3.11+) and Flask, this project is lightweight, extensible, an
 
 ### Before running the project, ensure you have:
 
-- Python 3.9 or higher
+- Python 3.11 or higher
 - A Twilio account
-- A Twilio WhatsApp Sandbox or approved WhatsApp number
+- A Twilio WhatsApp Sandbox with an approved WhatsApp number
 - OpenAI API key
 - Publicly accessible endpoint URL (ngrok for local development)
 
@@ -38,7 +38,7 @@ git clone https://github.com/tauraigombera/WhatsUpGPT.git
 pip install -r requirements.txt
 ```
 
-3. Add your OpenAI API key to the environment variables:
+3. Create .env file and add your OpenAI API key to the environment variables as follows:
 ```
 OPENAI_API_KEY=[your_api_key]
 ```
@@ -47,7 +47,6 @@ OPENAI_API_KEY=[your_api_key]
 ```
 python main.py
 ```
-
 
 The app should now be running on http://localhost:5000. 
 
