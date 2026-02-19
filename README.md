@@ -32,18 +32,22 @@ Built with Python (3.11+) and Flask, this project is lightweight, extensible, an
 ```
 git clone https://github.com/tauraigombera/whatsup_gpt.git
 ```
+2. Navigate into the project folder
+```
+cd whatsup_gpt
+```
 
-2. Install the required packages:
+3. Install the required packages:
 ```
 pip install -r requirements.txt
 ```
 
-3. Create .env file and add your OpenAI API key to the environment variables as follows:
+4. Create .env file and add your OpenAI API key to the environment variables as follows:
 ```
 OPENAI_API_KEY=[your_api_key]
 ```
 
-4. Run the application:
+5. Run the application:
 ```
 python main.py
 ```
