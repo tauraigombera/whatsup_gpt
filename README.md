@@ -30,7 +30,7 @@ Built with Python (3.11+) and Flask, this project is lightweight, extensible, an
 ## Local Setup
 1. Clone the repository:
 ```
-git clone https://github.com/tauraigombera/WhatsUpGPT.git
+git clone https://github.com/tauraigombera/whatsup_gpt.git
 ```
 
 2. Install the required packages:
