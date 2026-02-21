@@ -20,20 +20,9 @@ git clone https://github.com/tauraigombera/whatsup_gpt.git
 git checkout -b feature/your-feature-name
 ```
 
-4. Install dependencies
-```
- pip install -r requirements.txt
-```
+4. Run the application locally to ensure it works before making changes
 
-5. Create a `.env` file
-```
-OPENAI_API_KEY=your_key_here
-```
-
-6. Run locally
-```
-python main.py
-```
+- use docker or set up a virtual environment and install dependencies manually. Check the [README](https://github.com/tauraigombera/whatsup_gpt/blob/main/README.md) for instructions.
 
 ### How to Contribute
 
